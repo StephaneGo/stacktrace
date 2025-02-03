@@ -19,5 +19,10 @@ soit à l'initiative du créateur du ticket.
 De la même façon un ticket pourra être modifié ou supprimé soit par son auteur, soit par le formateur.
 Seuls le titre, la description ou l'état peut être modifié (La date de création et l'auteur ne peut pas être modifié)
 
-L'historique des tickets est à conserver pendant la durée du cours seulement. 
-Les cours ont une durée de 1 à plusieurs jours.
+Une fonctionnalité supprimer tous les tickets doit être accessible au formateur pour nettoyage de fin de cours.
+Cette fonctionnalité n'est pas prioritaire
+
+A terme, il faudra aussi pouvoir gérer les comptes utilisateur : 
+- page liste des utilisateurs accessible uniquement du formateur
+- le formateur peut créer des nouveaux utilisateurs, modifier login ou mot de passe, ou supprimer
+- L'élève peut changer le pseudonyme qui lui sert de login, et son mot de passe
