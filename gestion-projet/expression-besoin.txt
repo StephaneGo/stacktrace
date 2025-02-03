@@ -17,6 +17,7 @@ Ces propositions seront appelées réponses. Nous devrons connaître l'auteur, a
 Chaque ticket aura un état initial à "ouvert", qui pourra évoluer en "clos"  soit à l'initiative du formateur,
 soit à l'initiative du créateur du ticket.
 De la même façon un ticket pourra être modifié ou supprimé soit par son auteur, soit par le formateur.
+Seuls le titre, la description ou l'état peut être modifié (La date de création et l'auteur ne peut pas être modifié)
 
 L'historique des tickets est à conserver pendant la durée du cours seulement. 
 Les cours ont une durée de 1 à plusieurs jours.
