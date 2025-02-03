@@ -1,0 +1,22 @@
+
+Bonjour à toute l'équipe,
+
+Notre société ENI-Soft vient de remporter un nouveau contrat : 
+Le client est un centre de formation qui veut outiller ses formateurs en salle de cours.
+
+L'objectif est de créer une application qui permette à un élève pendant un TP de signaler une difficulté.
+Cette difficulté sera appelé ticket dans l'application. 
+Ce ticket devra être visible du formateur et des autres élèves pour permettre une entraide. 
+
+Ce ticket devra indiquer qui en est l'auteur, un titre, et une description du problème rencontré.
+A la création, la date avec heure, minute, seconde devra être enregistrée dans le ticket.
+
+A terme, l'application devra permettre aux différents acteurs de proposer une solution au problème rencontré.
+Ces propositions seront appelées réponses. Nous devrons connaître l'auteur, ainsi que la date de création de la réponse.
+
+Chaque ticket aura un état initial à "ouvert", qui pourra évoluer en "clos"  soit à l'initiative du formateur,
+soit à l'initiative du créateur du ticket.
+De la même façon un ticket pourra être modifié ou supprimé soit par son auteur, soit par le formateur.
+
+L'historique des tickets est à conserver pendant la durée du cours seulement. 
+Les cours ont une durée de 1 à plusieurs jours.
