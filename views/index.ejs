@@ -49,7 +49,7 @@
       <h2>
         <a href="/tickets/<%= tickets[i].id %>"> <%= tickets[i].titre %></a>
       </h2>
-      <p><%= tickets[i].description %></p>
+      <p><%- tickets[i].description %></p>
       <p>
         <a href="/tickets/<%= tickets[i].id %>/modifier">Modifier</a>
         <a href="/tickets/<%= tickets[i].id %>/supprimer">Supprimer</a>
