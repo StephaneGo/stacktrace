@@ -13,6 +13,8 @@ A la création, la date avec heure, minute, seconde devra être enregistrée dan
 
 A terme, l'application devra permettre aux différents acteurs de proposer une solution au problème rencontré.
 Ces propositions seront appelées réponses. Nous devrons connaître l'auteur, ainsi que la date de création de la réponse.
+Les réponses ne sont pas affichées sur la page liste des tickets pour ne pas surcharger cet écran,
+mais uniquement dans la page détail ticket.
 
 Chaque ticket aura un état initial à "ouvert", qui pourra évoluer en "clos"  soit à l'initiative du formateur,
 soit à l'initiative du créateur du ticket.
