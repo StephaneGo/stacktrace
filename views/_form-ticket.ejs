@@ -1,0 +1,27 @@
+<div>
+  <label for="titre">Titre *</label>
+  <input
+    type="text"
+    name="titre"
+    id="titre"
+    value="<%=typeof ticket !== 'undefined'? ticket.titre: ''%> "
+  />
+  <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='titre')) { %>
+  <div class="color-error"><%= errors.find(e=>e.path=='titre').msg %></div>
+  <% } %>
+</div>
+<div>
+  <label for="description">Description *</label>
+  <input
+    type="text"
+    name="description"
+    id="description"
+    value="<%=typeof ticket !== 'undefined'? ticket.description: ''%>"
+  />
+  <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='description'))
+  { %>
+  <div class="color-error">
+    <%= errors.find(e=>e.path=='description').msg %>
+  </div>
+  <% } %>
+</div>
