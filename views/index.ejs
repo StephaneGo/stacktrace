@@ -4,26 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/my-tailwind.css" />
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
     <%- include('_header.ejs') %>
 
-    <h1>Tickets</h1>
+    <div class="container mx-8 m-auto">
+      <h1 class="w-max m-auto mb-5 text-4xl">Tickets</h1>
 
-    <h2><a href="/tickets/ajouter">Ajouter un ticket</a></h2>
-
-    <% for (let i = 0; i < tickets.length; i++) { %>
-    <div>
-      <h2>
-        <a href="/tickets/<%= tickets[i].id %>"> <%= tickets[i].titre %></a>
+      <h2
+        class="w-max m-auto mt-1 text-white bg-indigo-500 border-0 py-2 px-8 hover:bg-indigo-600 rounded text-lg"
+      >
+        <a href="/tickets/ajouter">Ajouter un ticket</a>
       </h2>
-      <p><%- tickets[i].description %></p>
-      <p>
-        <a href="/tickets/<%= tickets[i].id %>/modifier">Modifier</a>
-        <a href="/tickets/<%= tickets[i].id %>/supprimer">Supprimer</a>
-      </p>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <% for (let i = 0; i < tickets.length; i++) { %>
+
+          <!--
+    -->
+          <div class="-my-8 divide-y-2 divide-gray-100">
+            <div class="py-8 flex flex-wrap md:flex-nowrap">
+              <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                <span class="font-semibold title-font text-gray-700"
+                  >CATEGORY</span
+                >
+                <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+              </div>
+              <div class="md:flex-grow">
+                <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+                  <a href="/tickets/<%= tickets[i].id %>">
+                    <%= tickets[i].titre %></a
+                  >
+                </h2>
+                <p class="leading-relaxed"><%- tickets[i].description %></p>
+                <p>
+                  <a href="/tickets/<%= tickets[i].id %>/modifier">Modifier</a>
+                  <a href="/tickets/<%= tickets[i].id %>/supprimer"
+                    >Supprimer</a
+                  >
+                </p>
+
+                <a
+                  class="text-indigo-500 inline-flex items-center mt-4"
+                  href="/tickets/<%= tickets[i].id %>"
+                >
+                  Détail du ticket
+                  <svg
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <% } %>
+        </div>
+      </section>
+      <!--container -->
     </div>
-    <% } %>
   </body>
 </html>

@@ -11,6 +11,18 @@
   <% } %>
 </div>
 <div>
+  <label for="titre">Auteur *</label>
+  <input
+    type="text"
+    name="auteur"
+    id="auteur"
+    value="<%=typeof ticket !== 'undefined'? ticket.auteur: ''%> "
+  />
+  <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='auteur')) { %>
+  <div class="color-error"><%= errors.find(e=>e.path=='auteur').msg %></div>
+  <% } %>
+</div>
+<div>
   <label for="description">Description *</label>
   <input
     type="text"

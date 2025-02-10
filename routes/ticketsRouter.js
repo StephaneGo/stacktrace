@@ -20,7 +20,7 @@ router.post(
     .isLength({ min: 3 })
     .withMessage("Minimum 3 caractères"),
   (req, res) => {
-    const { titre, description } = req.body;
+    const { titre, auteur, description } = req.body;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       res.render("ajouter-ticket", {
@@ -30,7 +30,7 @@ router.post(
       return;
     }
 
-    ticketsService.addTicket(titre, description);
+    ticketsService.addTicket(titre, auteur, description);
 
     res.redirect("/");
   }
@@ -65,8 +65,8 @@ router.post(
       return;
     }
     const { id } = req.params;
-    const { titre, description } = req.body;
-    ticketsService.updateTicket(id, titre, description);
+    const { titre, auteur, description } = req.body;
+    ticketsService.updateTicket(id, titre, auteur, description);
     res.redirect("/");
   }
 );
