@@ -1,4 +1,5 @@
 const e = require("express");
+var { format } = require("date-fns");
 
 let tickets = [
   { id: 1, titre: "ticket 1", auteur: "Val", description: "description 1" },
@@ -20,10 +21,27 @@ exports.deleteTicket = (id) => {
 };
 
 exports.addTicket = (titre, auteur, description) => {
-  tickets.push({ id: idx++, titre, auteur, description });
+  const creation = Date.now();
+  const creation_formatted = format(creation, "dd/MM/yyyy HH:mm");
+  tickets.push({
+    id: idx++,
+    titre,
+    auteur,
+    description,
+    creation,
+    creation_formatted,
+  });
 };
 
 exports.updateTicket = (id, titre, auteur, description) => {
   let index = tickets.findIndex((ticket) => ticket.id == id);
-  tickets[index] = { id: id, titre, auteur, description };
+
+  tickets[index] = {
+    id: id,
+    titre,
+    auteur,
+    description,
+    creation: tickets[index].creation,
+    creation_formatted: tickets[index].creation_formatted,
+  };
 };
