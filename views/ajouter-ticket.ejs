@@ -4,21 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ajouter un ticket</title>
+    <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
     <h2>Nouveau ticket</h2>
     <form action="/tickets/ajouter" method="post">
       <div>
-        <label for="titre">Titre</label>
-        <input type="text" name="titre" id="titre" />
+        <label for="titre">Titre *</label>
+        <input
+          type="text"
+          name="titre"
+          id="titre"
+          value="<%=typeof ticket !== 'undefined'? ticket.titre: ''%> "
+        />
+        <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='titre'))
+        { %>
+        <div class="color-error">
+          <%= errors.find(e=>e.path=='titre').msg %>
+        </div>
+        <% } %>
       </div>
       <div>
-        <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10">
-        </textarea>
+        <label for="description">Description *</label>
+        <input
+          type="text"
+          name="description"
+          id="description"
+          value="<%=typeof ticket !== 'undefined'? ticket.description: ''%>"
+        />
+        <% if (typeof errors !== 'undefined' &&
+        errors.find(e=>e.path=='description')) { %>
+        <div class="color-error">
+          <%= errors.find(e=>e.path=='description').msg %>
+        </div>
+        <% } %>
       </div>
-
-      <button type="submit">Enregistrer</button>
+      <button type="submit">Ajouter</button>
     </form>
   </body>
 </html>
