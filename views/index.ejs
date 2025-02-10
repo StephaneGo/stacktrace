@@ -9,40 +9,7 @@
   <body>
     <h1>Tickets</h1>
 
-    <h2>Ajouter un ticket</h2>
-    <form action="/tickets" method="post">
-      <div>
-        <label for="titre">Titre *</label>
-        <input
-          type="text"
-          name="titre"
-          id="titre"
-          value="<%=typeof ticket !== 'undefined'? ticket.titre: ''%> "
-        />
-        <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='titre'))
-        { %>
-        <div class="color-error">
-          <%= errors.find(e=>e.path=='titre').msg %>
-        </div>
-        <% } %>
-      </div>
-      <div>
-        <label for="description">Description *</label>
-        <input
-          type="text"
-          name="description"
-          id="description"
-          value="<%=typeof ticket !== 'undefined'? ticket.description: ''%>"
-        />
-        <% if (typeof errors !== 'undefined' &&
-        errors.find(e=>e.path=='description')) { %>
-        <div class="color-error">
-          <%= errors.find(e=>e.path=='description').msg %>
-        </div>
-        <% } %>
-      </div>
-      <button type="submit">Ajouter</button>
-    </form>
+    <h2><a href="/tickets/ajouter">Ajouter un ticket</a></h2>
 
     <% for (let i = 0; i < tickets.length; i++) { %>
     <div>

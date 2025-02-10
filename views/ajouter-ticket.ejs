@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un ticket</title>
+  </head>
+  <body>
+    <h2>Nouveau ticket</h2>
+    <form action="/tickets/ajouter" method="post">
+      <div>
+        <label for="titre">Titre</label>
+        <input type="text" name="titre" id="titre" />
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10">
+        </textarea>
+      </div>
+
+      <button type="submit">Enregistrer</button>
+    </form>
+  </body>
+</html>

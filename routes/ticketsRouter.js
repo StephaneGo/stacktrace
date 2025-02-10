@@ -8,8 +8,12 @@ router.get("/", (req, res) => {
   res.render("index", { tickets: ticketsService.findAllTickets() });
 });
 
+router.get("/ajouter", (req, res) => {
+  res.render("ajouter-ticket");
+});
+
 router.post(
-  "/",
+  "/ajouter",
   body("titre").trim().notEmpty().withMessage("Champ obligatoire"),
   body("description")
     .trim()
@@ -19,8 +23,7 @@ router.post(
     const { titre, description } = req.body;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      res.render("index", {
-        tickets: ticketsService.findAllTickets(),
+      res.render("ajouter-ticket", {
         ticket: req.body,
         errors: errors.array(),
       });
