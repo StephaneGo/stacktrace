@@ -1,12 +1,8 @@
 const e = require("express");
-var { format } = require("date-fns");
+var { format, add } = require("date-fns");
 
-let tickets = [
-  { id: 1, titre: "ticket 1", auteur: "Val", description: "description 1" },
-  { id: 2, titre: "ticket 2", auteur: "Jane", description: "description 2" },
-  { id: 3, titre: "ticket 3", auteur: "Rose", description: "description 3" },
-];
-let idx = 4;
+let tickets = [];
+let idx = 0;
 
 exports.findAllTickets = () => {
   return tickets;
