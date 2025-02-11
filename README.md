@@ -1,5 +1,5 @@
 <div style="align: center">
-<img src="./help-high-quality-png-350x350.png" width="100" >
+<img style="margin: auto" src="./help-high-quality-png-350x350.png" width="100" >
 </div>
 
 IDE : Utiliser Visual Studio Code
