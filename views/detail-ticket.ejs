@@ -8,11 +8,25 @@
   </head>
   <body>
     <%- include('_header.ejs') %>
-    <h2><%= ticket.titre %></h2>
-    <p><%= ticket.description %></p>
-    <p>
-      <a href="/tickets/<%= ticket.id %>/modifier">Modifier</a>
-      <a href="/tickets/<%= ticket.id %>/supprimer">Supprimer</a>
-    </p>
+
+    <h2 class="mx-auto w-fit mb-5 text-4xl"><%= ticket.titre %></h2>
+    <div class="flex flex-col items-center">
+      <section class="">
+        <h3 class="text-md text-gray-600 leading-7">Description :</h3>
+        <p class="mb-4"><%= ticket.description %></p>
+        <div class="flex gap-1">
+          <div
+            class="rounded-2xl w-fit px-3 py-0.5 text-gray-50 bg-indigo-500 text-sm"
+          >
+            <a href="/tickets/<%= ticket.id %>/modifier">Modifier</a>
+          </div>
+          <div
+            class="rounded-2xl w-fit px-3 py-0.5 text-gray-50 bg-indigo-500 text-sm"
+          >
+            <a href="/tickets/<%= ticket.id %>/supprimer">Supprimer</a>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

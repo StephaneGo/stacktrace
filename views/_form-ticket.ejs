@@ -1,39 +1,50 @@
-<div>
-  <label for="titre">Titre *</label>
-  <input
-    type="text"
-    name="titre"
-    id="titre"
-    value="<%=typeof ticket !== 'undefined'? ticket.titre: ''%> "
-  />
-  <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='titre')) { %>
-  <div class="color-error"><%= errors.find(e=>e.path=='titre').msg %></div>
-  <% } %>
-</div>
-<div>
-  <label for="titre">Auteur *</label>
-  <input
-    type="text"
-    name="auteur"
-    id="auteur"
-    value="<%=typeof ticket !== 'undefined'? ticket.auteur: ''%> "
-  />
-  <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='auteur')) { %>
-  <div class="color-error"><%= errors.find(e=>e.path=='auteur').msg %></div>
-  <% } %>
-</div>
-<div>
-  <label for="description">Description *</label>
-  <input
-    type="text"
-    name="description"
-    id="description"
-    value="<%=typeof ticket !== 'undefined'? ticket.description: ''%>"
-  />
-  <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='description'))
-  { %>
-  <div class="color-error">
-    <%= errors.find(e=>e.path=='description').msg %>
+<div class="mx-20 flex flex-col justify-center items-center">
+  <div class="px-6 pb-2 min-w-full">
+    <label class="text-md text-gray-600 leading-7" for="titre">Titre *</label>
+    <input
+      class="border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-7 rounded w-full bg-gray-100"
+      type="text"
+      name="titre"
+      id="titre"
+      value="<%=typeof ticket !== 'undefined'? ticket.titre: ''%> "
+    />
+    <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='titre')) {
+    %>
+    <div class="color-error"><%= errors.find(e=>e.path=='titre').msg %></div>
+    <% } %>
   </div>
-  <% } %>
+  <div class="px-6 min-w-full pb-2">
+    <label class="text-md text-gray-600 leading-7" for="titre"
+      >Auteur (*) :
+    </label>
+    <input
+      class="border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-7 rounded w-full bg-gray-100"
+      type="text"
+      name="auteur"
+      id="auteur"
+      value="<%=typeof ticket !== 'undefined'? ticket.auteur: ''%> "
+    />
+    <% if (typeof errors !== 'undefined' && errors.find(e=>e.path=='auteur')) {
+    %>
+    <div class="color-error"><%= errors.find(e=>e.path=='auteur').msg %></div>
+    <% } %>
+  </div>
+  <div class="px-6 pb-4 min-w-full">
+    <label class="text-md text-gray-600 leading-7" for="description"
+      >Description *</label
+    >
+    <input
+      class="border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-7 rounded w-full bg-gray-100"
+      type="text"
+      name="description"
+      id="description"
+      value="<%=typeof ticket !== 'undefined'? ticket.description: ''%>"
+    />
+    <% if (typeof errors !== 'undefined' &&
+    errors.find(e=>e.path=='description')) { %>
+    <div class="color-error">
+      <%= errors.find(e=>e.path=='description').msg %>
+    </div>
+    <% } %>
+  </div>
 </div>

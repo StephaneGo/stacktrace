@@ -42,12 +42,22 @@
                   >
                 </h2>
                 <p class="leading-relaxed"><%- tickets[i].description %></p>
-                <p>
-                  <a href="/tickets/<%= tickets[i].id %>/modifier">Modifier</a>
-                  <a href="/tickets/<%= tickets[i].id %>/supprimer"
-                    >Supprimer</a
+                <div class="flex gap-1">
+                  <div
+                    class="rounded-2xl w-fit px-3 py-0.5 text-gray-50 bg-indigo-500 text-sm"
                   >
-                </p>
+                    <a href="/tickets/<%= tickets[i].id %>/modifier"
+                      >Modifier</a
+                    >
+                  </div>
+                  <div
+                    class="rounded-2xl w-fit px-3 py-0.5 text-gray-50 bg-indigo-500 text-sm"
+                  >
+                    <a href="/tickets/<%= tickets[i].id %>/supprimer"
+                      >Supprimer</a
+                    >
+                  </div>
+                </div>
 
                 <a
                   class="text-indigo-500 inline-flex items-center mt-4"
@@ -74,7 +84,9 @@
           <% } %>
         </div>
       </section>
+
       <!--container -->
     </div>
+    <%- include('_footer.ejs') %>
   </body>
 </html>
