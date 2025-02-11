@@ -1,4 +1,6 @@
-![Logo Help!](/help-high-quality-png-350x350.png "Logo Help de l'application")
+<div style="align: center">
+<img src="./help-high-quality-png-350x350.png" width="100" >
+</div>
 
 IDE : Utiliser Visual Studio Code
 
