@@ -19,14 +19,16 @@ exports.deleteTicket = (id) => {
 exports.addTicket = (titre, auteur, description) => {
   const creation = Date.now();
   const creation_formatted = format(creation, "dd/MM/yyyy HH:mm");
-  tickets.push({
+  const newTicket = {
     id: idx++,
     titre,
     auteur,
     description,
     creation,
     creation_formatted,
-  });
+  };
+  tickets.push(newTicket);
+  return newTicket;
 };
 
 exports.updateTicket = (id, titre, auteur, description) => {

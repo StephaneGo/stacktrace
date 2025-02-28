@@ -15,8 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 var indexRouter = require("./routes/indexRouter");
 var ticketsRouter = require("./routes/ticketsRouter");
 
+var ticketsRouterAPI = require("./routes/ticketsRouterAPI");
+
 app.use("/", indexRouter);
 app.use("/tickets", ticketsRouter);
+app.use("/api/tickets", ticketsRouterAPI);
 
 app.use((req, res, next) => {
   res.status(404).render("erreur404");
