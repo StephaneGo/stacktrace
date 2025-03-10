@@ -10,6 +10,7 @@ Ce ticket devra être visible du formateur et des autres élèves pour permettre
 
 Ce ticket devra indiquer qui en est l'auteur, un titre, et une description du problème rencontré.
 A la création, la date avec heure, minute, seconde devra être enregistrée dans le ticket.
+Attention, le titre et l'auteur sont des champs obligatoires. La description doit avoir une longueur d'au moins 3 caractères.
 
 A terme, l'application devra permettre aux différents acteurs de proposer une solution au problème rencontré.
 Ces propositions seront appelées réponses. Nous devrons connaître l'auteur, ainsi que la date de création de la réponse.
