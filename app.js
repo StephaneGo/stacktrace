@@ -11,6 +11,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 var indexRouter = require("./routes/indexRouter");
 var ticketsRouter = require("./routes/ticketsRouter");
